@@ -6,6 +6,7 @@ def bfs_with_colors_and_distance(graph: Dict[str, List[str]], start: str) -> Non
     # Initialize color and distance dictionaries
     color: Dict[str, str] = {node: 'white' for node in graph}
     distance: Dict[str, float] = {node: float('inf') for node in graph}  # Use infinity as initial distance
+    print("Before starting All",color,distance)
     # A queue to maintain the nodes to visit
     queue: Deque[str] = deque([start])
     
@@ -26,7 +27,6 @@ def bfs_with_colors_and_distance(graph: Dict[str, List[str]], start: str) -> Non
 
 # Example usage
 if __name__ == '__main__':
-    # A sample graph represented as an adjacency list
     graph: Dict[str, List[str]] = {
         'A': ['B', 'C'],
         'B': ['A', 'D', 'E'],
